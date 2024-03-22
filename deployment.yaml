@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-jg-deployment
+  name: react-app-deployment
 spec:
   replicas: 1  # Number of desired replicas
   selector:
@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app:react-jg-app
+        app: react-jg-app
     spec:
       containers:
-      - name: react-jg-app-deployment
+      - name: react-jg-app
         image: yash5090/react-jg-app:latest
         ports:
         - containerPort: 3000  # Port your application listens on
